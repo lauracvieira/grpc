@@ -24,14 +24,9 @@ class DSIDServer(dsid_pb2_grpc.DSIDServicer):
         logger.info("Sending server Long response. Value: " + str(long_response))
         return dsid_pb2.LongReply(message=long_response)
 
-    def SendsBigLongResponse(self, request, context):
-        long_response = 12345678988881011
-        logger.info("Sending server Long response. Value: "+ str(long_response))
-        return dsid_pb2.BigLongReply(message=long_response)
-
     def SendsStringResponse(self, request, context):
         logger.info("Sending server String response. Value: A" )
-        return dsid_pb2.StringReply(message="A")
+        return dsid_pb2.StringReply(message=request.message)
 
     def SendsObjectResponse(self, request, context):
         user = dsid_pb2.User()

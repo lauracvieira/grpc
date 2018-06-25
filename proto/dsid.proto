@@ -9,9 +9,6 @@ service DSID {
     //Long
     rpc SendsLongResponse (LongRequest) returns (LongReply) {}
 
-    //8 arguments Long
-    rpc SendsBigLongResponse (BigLongRequest) returns (BigLongReply) {}
-
     //String
     rpc SendsStringResponse (StringRequest) returns (StringReply) {}
     
@@ -52,10 +49,6 @@ message BigLongRequest {
   int64 parameter6 = 6;
   int64 parameter7 = 7;
   int64 parameter8 = 8;
-}
-
-message BigLongReply {
-  int64 message = 1;
 }
 
 //Caso 4 - Strings
