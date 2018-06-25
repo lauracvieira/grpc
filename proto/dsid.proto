@@ -1,0 +1,77 @@
+syntax = "proto3";
+package dsid;
+
+// The service definition.
+service DSID {
+    //Void
+    rpc SendsVoidResponse (VoidRequest) returns (VoidReply) {}
+
+    //Long
+    rpc SendsLongResponse (LongRequest) returns (LongReply) {}
+
+    //8 arguments Long
+    rpc SendsBigLongResponse (BigLongRequest) returns (BigLongReply) {}
+
+    //String
+    rpc SendsStringResponse (StringRequest) returns (StringReply) {}
+    
+    //Object(struct)
+    rpc SendsObjectResponse (ObjectRequest) returns (ObjectReply) {}
+}
+
+message User{
+  string name = 1;
+  string lastname = 2;
+  int32 age = 3;
+  int32 nUSP = 4;
+};
+
+//Caso 1 - Void
+message VoidRequest {
+}
+
+message VoidReply {
+}
+
+//Caso 2 - Long
+message LongRequest {
+  int64 message = 1;
+}
+
+message LongReply {
+  int64 message = 1;
+}
+
+//Caso 3 - 8 arguments Long
+message BigLongRequest {
+  int64 parameter1 = 1;
+  int64 parameter2 = 2;
+  int64 parameter3 = 3;
+  int64 parameter4 = 4;
+  int64 parameter5 = 5;
+  int64 parameter6 = 6;
+  int64 parameter7 = 7;
+  int64 parameter8 = 8;
+}
+
+message BigLongReply {
+  int64 message = 1;
+}
+
+//Caso 4 - Strings
+message StringRequest {
+  string message = 1;
+}
+
+message StringReply {
+  string message = 1;
+}
+
+//Caso 6 - Object
+message ObjectRequest {
+  User message = 1;
+}
+
+message ObjectReply {
+  User message = 1;
+}
