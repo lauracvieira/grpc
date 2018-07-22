@@ -4,9 +4,9 @@ import grpc
 import dsid_pb2 as dsid__pb2
 
 
-class DSIDStub(object):
-  """The service definition.
-  """
+class GRPCStub(object):
+  # missing associated documentation comment in .proto file
+  pass
 
   def __init__(self, channel):
     """Constructor.
@@ -14,101 +14,203 @@ class DSIDStub(object):
     Args:
       channel: A grpc.Channel.
     """
-    self.SendsVoidResponse = channel.unary_unary(
-        '/dsid.DSID/SendsVoidResponse',
+    self.VoidRequestVoid = channel.unary_unary(
+        '/grpc.GRPC/VoidRequestVoid',
         request_serializer=dsid__pb2.VoidRequest.SerializeToString,
-        response_deserializer=dsid__pb2.VoidReply.FromString,
+        response_deserializer=dsid__pb2.VoidResponse.FromString,
         )
-    self.SendsLongResponse = channel.unary_unary(
-        '/dsid.DSID/SendsLongResponse',
-        request_serializer=dsid__pb2.LongRequest.SerializeToString,
-        response_deserializer=dsid__pb2.LongReply.FromString,
+    self.VoidRequestBigString = channel.unary_unary(
+        '/grpc.GRPC/VoidRequestBigString',
+        request_serializer=dsid__pb2.VoidRequest.SerializeToString,
+        response_deserializer=dsid__pb2.StringResponse.FromString,
         )
-    self.SendsBigLongResponse = channel.unary_unary(
-        '/dsid.DSID/SendsBigLongResponse',
-        request_serializer=dsid__pb2.BigLongRequest.SerializeToString,
-        response_deserializer=dsid__pb2.BigLongReply.FromString,
-        )
-    self.SendsStringResponse = channel.unary_unary(
-        '/dsid.DSID/SendsStringResponse',
+    self.StringRequestSameString = channel.unary_unary(
+        '/grpc.GRPC/StringRequestSameString',
         request_serializer=dsid__pb2.StringRequest.SerializeToString,
-        response_deserializer=dsid__pb2.StringReply.FromString,
+        response_deserializer=dsid__pb2.StringResponse.FromString,
         )
-    self.SendsObjectResponse = channel.unary_unary(
-        '/dsid.DSID/SendsObjectResponse',
+    self.StringRequestBigString = channel.unary_unary(
+        '/grpc.GRPC/StringRequestBigString',
+        request_serializer=dsid__pb2.StringRequest.SerializeToString,
+        response_deserializer=dsid__pb2.StringResponse.FromString,
+        )
+    self.LongRequestLong = channel.unary_unary(
+        '/grpc.GRPC/LongRequestLong',
+        request_serializer=dsid__pb2.LongRequest.SerializeToString,
+        response_deserializer=dsid__pb2.LongResponse.FromString,
+        )
+    self.EightLongRequestLong = channel.unary_unary(
+        '/grpc.GRPC/EightLongRequestLong',
+        request_serializer=dsid__pb2.EightLongRequest.SerializeToString,
+        response_deserializer=dsid__pb2.LongResponse.FromString,
+        )
+    self.LongListRequestLong = channel.unary_unary(
+        '/grpc.GRPC/LongListRequestLong',
+        request_serializer=dsid__pb2.LongListRequest.SerializeToString,
+        response_deserializer=dsid__pb2.LongResponse.FromString,
+        )
+    self.LongRequestObject = channel.unary_unary(
+        '/grpc.GRPC/LongRequestObject',
+        request_serializer=dsid__pb2.LongRequest.SerializeToString,
+        response_deserializer=dsid__pb2.ObjectResponse.FromString,
+        )
+    self.ObjectRequestLong = channel.unary_unary(
+        '/grpc.GRPC/ObjectRequestLong',
         request_serializer=dsid__pb2.ObjectRequest.SerializeToString,
-        response_deserializer=dsid__pb2.ObjectReply.FromString,
+        response_deserializer=dsid__pb2.LongResponse.FromString,
+        )
+    self.ObjectRequestObject = channel.unary_unary(
+        '/grpc.GRPC/ObjectRequestObject',
+        request_serializer=dsid__pb2.ObjectRequest.SerializeToString,
+        response_deserializer=dsid__pb2.ObjectResponse.FromString,
+        )
+    self.BigIntegerList = channel.unary_unary(
+        '/grpc.GRPC/BigIntegerList',
+        request_serializer=dsid__pb2.IntegerListRequest.SerializeToString,
+        response_deserializer=dsid__pb2.VoidResponse.FromString,
         )
 
 
-class DSIDServicer(object):
-  """The service definition.
-  """
+class GRPCServicer(object):
+  # missing associated documentation comment in .proto file
+  pass
 
-  def SendsVoidResponse(self, request, context):
-    """Void
-    """
+  def VoidRequestVoid(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def SendsLongResponse(self, request, context):
-    """Long
-    """
+  def VoidRequestBigString(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def SendsBigLongResponse(self, request, context):
-    """8 arguments Long
-    """
+  def StringRequestSameString(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def SendsStringResponse(self, request, context):
-    """String
-    """
+  def StringRequestBigString(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def SendsObjectResponse(self, request, context):
-    """Object(struct)
-    """
+  def LongRequestLong(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def EightLongRequestLong(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def LongListRequestLong(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def LongRequestObject(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def ObjectRequestLong(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def ObjectRequestObject(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def BigIntegerList(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
 
-def add_DSIDServicer_to_server(servicer, server):
+def add_GRPCServicer_to_server(servicer, server):
   rpc_method_handlers = {
-      'SendsVoidResponse': grpc.unary_unary_rpc_method_handler(
-          servicer.SendsVoidResponse,
+      'VoidRequestVoid': grpc.unary_unary_rpc_method_handler(
+          servicer.VoidRequestVoid,
           request_deserializer=dsid__pb2.VoidRequest.FromString,
-          response_serializer=dsid__pb2.VoidReply.SerializeToString,
+          response_serializer=dsid__pb2.VoidResponse.SerializeToString,
       ),
-      'SendsLongResponse': grpc.unary_unary_rpc_method_handler(
-          servicer.SendsLongResponse,
-          request_deserializer=dsid__pb2.LongRequest.FromString,
-          response_serializer=dsid__pb2.LongReply.SerializeToString,
+      'VoidRequestBigString': grpc.unary_unary_rpc_method_handler(
+          servicer.VoidRequestBigString,
+          request_deserializer=dsid__pb2.VoidRequest.FromString,
+          response_serializer=dsid__pb2.StringResponse.SerializeToString,
       ),
-      'SendsBigLongResponse': grpc.unary_unary_rpc_method_handler(
-          servicer.SendsBigLongResponse,
-          request_deserializer=dsid__pb2.BigLongRequest.FromString,
-          response_serializer=dsid__pb2.BigLongReply.SerializeToString,
-      ),
-      'SendsStringResponse': grpc.unary_unary_rpc_method_handler(
-          servicer.SendsStringResponse,
+      'StringRequestSameString': grpc.unary_unary_rpc_method_handler(
+          servicer.StringRequestSameString,
           request_deserializer=dsid__pb2.StringRequest.FromString,
-          response_serializer=dsid__pb2.StringReply.SerializeToString,
+          response_serializer=dsid__pb2.StringResponse.SerializeToString,
       ),
-      'SendsObjectResponse': grpc.unary_unary_rpc_method_handler(
-          servicer.SendsObjectResponse,
+      'StringRequestBigString': grpc.unary_unary_rpc_method_handler(
+          servicer.StringRequestBigString,
+          request_deserializer=dsid__pb2.StringRequest.FromString,
+          response_serializer=dsid__pb2.StringResponse.SerializeToString,
+      ),
+      'LongRequestLong': grpc.unary_unary_rpc_method_handler(
+          servicer.LongRequestLong,
+          request_deserializer=dsid__pb2.LongRequest.FromString,
+          response_serializer=dsid__pb2.LongResponse.SerializeToString,
+      ),
+      'EightLongRequestLong': grpc.unary_unary_rpc_method_handler(
+          servicer.EightLongRequestLong,
+          request_deserializer=dsid__pb2.EightLongRequest.FromString,
+          response_serializer=dsid__pb2.LongResponse.SerializeToString,
+      ),
+      'LongListRequestLong': grpc.unary_unary_rpc_method_handler(
+          servicer.LongListRequestLong,
+          request_deserializer=dsid__pb2.LongListRequest.FromString,
+          response_serializer=dsid__pb2.LongResponse.SerializeToString,
+      ),
+      'LongRequestObject': grpc.unary_unary_rpc_method_handler(
+          servicer.LongRequestObject,
+          request_deserializer=dsid__pb2.LongRequest.FromString,
+          response_serializer=dsid__pb2.ObjectResponse.SerializeToString,
+      ),
+      'ObjectRequestLong': grpc.unary_unary_rpc_method_handler(
+          servicer.ObjectRequestLong,
           request_deserializer=dsid__pb2.ObjectRequest.FromString,
-          response_serializer=dsid__pb2.ObjectReply.SerializeToString,
+          response_serializer=dsid__pb2.LongResponse.SerializeToString,
+      ),
+      'ObjectRequestObject': grpc.unary_unary_rpc_method_handler(
+          servicer.ObjectRequestObject,
+          request_deserializer=dsid__pb2.ObjectRequest.FromString,
+          response_serializer=dsid__pb2.ObjectResponse.SerializeToString,
+      ),
+      'BigIntegerList': grpc.unary_unary_rpc_method_handler(
+          servicer.BigIntegerList,
+          request_deserializer=dsid__pb2.IntegerListRequest.FromString,
+          response_serializer=dsid__pb2.VoidResponse.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
-      'dsid.DSID', rpc_method_handlers)
+      'grpc.GRPC', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))

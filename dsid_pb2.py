@@ -17,46 +17,39 @@ _sym_db = _symbol_database.Default()
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='dsid.proto',
-  package='dsid',
+  package='grpc',
   syntax='proto3',
-  serialized_pb=_b('\n\ndsid.proto\x12\x04\x64sid\"A\n\x04User\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x10\n\x08lastname\x18\x02 \x01(\t\x12\x0b\n\x03\x61ge\x18\x03 \x01(\x05\x12\x0c\n\x04nUSP\x18\x04 \x01(\x05\"\r\n\x0bVoidRequest\"\x0b\n\tVoidReply\"\x1e\n\x0bLongRequest\x12\x0f\n\x07message\x18\x01 \x01(\x03\"\x1c\n\tLongReply\x12\x0f\n\x07message\x18\x01 \x01(\x03\"\xb0\x01\n\x0e\x42igLongRequest\x12\x12\n\nparameter1\x18\x01 \x01(\x03\x12\x12\n\nparameter2\x18\x02 \x01(\x03\x12\x12\n\nparameter3\x18\x03 \x01(\x03\x12\x12\n\nparameter4\x18\x04 \x01(\x03\x12\x12\n\nparameter5\x18\x05 \x01(\x03\x12\x12\n\nparameter6\x18\x06 \x01(\x03\x12\x12\n\nparameter7\x18\x07 \x01(\x03\x12\x12\n\nparameter8\x18\x08 \x01(\x03\"\x1f\n\x0c\x42igLongReply\x12\x0f\n\x07message\x18\x01 \x01(\x03\" \n\rStringRequest\x12\x0f\n\x07message\x18\x01 \x01(\t\"\x1e\n\x0bStringReply\x12\x0f\n\x07message\x18\x01 \x01(\t\",\n\rObjectRequest\x12\x1b\n\x07message\x18\x01 \x01(\x0b\x32\n.dsid.User\"*\n\x0bObjectReply\x12\x1b\n\x07message\x18\x01 \x01(\x0b\x32\n.dsid.User2\xc2\x02\n\x04\x44SID\x12\x39\n\x11SendsVoidResponse\x12\x11.dsid.VoidRequest\x1a\x0f.dsid.VoidReply\"\x00\x12\x39\n\x11SendsLongResponse\x12\x11.dsid.LongRequest\x1a\x0f.dsid.LongReply\"\x00\x12\x42\n\x14SendsBigLongResponse\x12\x14.dsid.BigLongRequest\x1a\x12.dsid.BigLongReply\"\x00\x12?\n\x13SendsStringResponse\x12\x13.dsid.StringRequest\x1a\x11.dsid.StringReply\"\x00\x12?\n\x13SendsObjectResponse\x12\x13.dsid.ObjectRequest\x1a\x11.dsid.ObjectReply\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n\ndsid.proto\x12\x04grpc\"C\n\x06Object\x12\x10\n\x08longAttr\x18\x01 \x01(\x03\x12\x12\n\nstringAttr\x18\x02 \x01(\t\x12\x13\n\x0b\x62ooleanAttr\x18\x03 \x01(\x08\"\r\n\x0bVoidRequest\"\"\n\rStringRequest\x12\x11\n\tparameter\x18\x01 \x01(\t\" \n\x0bLongRequest\x12\x11\n\tparameter\x18\x01 \x01(\x03\"\xb2\x01\n\x10\x45ightLongRequest\x12\x12\n\nparameter1\x18\x01 \x01(\x03\x12\x12\n\nparameter2\x18\x02 \x01(\x03\x12\x12\n\nparameter3\x18\x03 \x01(\x03\x12\x12\n\nparameter4\x18\x04 \x01(\x03\x12\x12\n\nparameter5\x18\x05 \x01(\x03\x12\x12\n\nparameter6\x18\x06 \x01(\x03\x12\x12\n\nparameter7\x18\x07 \x01(\x03\x12\x12\n\nparameter8\x18\x08 \x01(\x03\"$\n\x0fLongListRequest\x12\x11\n\tparameter\x18\x01 \x03(\x03\"0\n\rObjectRequest\x12\x1f\n\tparameter\x18\x01 \x01(\x0b\x32\x0c.grpc.Object\"\'\n\x12IntegerListRequest\x12\x11\n\tparameter\x18\x01 \x03(\x05\"\x0e\n\x0cVoidResponse\"\"\n\x0eStringResponse\x12\x10\n\x08response\x18\x01 \x01(\t\" \n\x0cLongResponse\x12\x10\n\x08response\x18\x01 \x01(\x03\"0\n\x0eObjectResponse\x12\x1e\n\x08response\x18\x01 \x01(\x0b\x32\x0c.grpc.Object2\xca\x05\n\x04GRPC\x12\x38\n\x0fVoidRequestVoid\x12\x11.grpc.VoidRequest\x1a\x12.grpc.VoidResponse\x12?\n\x14VoidRequestBigString\x12\x11.grpc.VoidRequest\x1a\x14.grpc.StringResponse\x12\x44\n\x17StringRequestSameString\x12\x13.grpc.StringRequest\x1a\x14.grpc.StringResponse\x12\x43\n\x16StringRequestBigString\x12\x13.grpc.StringRequest\x1a\x14.grpc.StringResponse\x12\x38\n\x0fLongRequestLong\x12\x11.grpc.LongRequest\x1a\x12.grpc.LongResponse\x12\x42\n\x14\x45ightLongRequestLong\x12\x16.grpc.EightLongRequest\x1a\x12.grpc.LongResponse\x12@\n\x13LongListRequestLong\x12\x15.grpc.LongListRequest\x1a\x12.grpc.LongResponse\x12<\n\x11LongRequestObject\x12\x11.grpc.LongRequest\x1a\x14.grpc.ObjectResponse\x12<\n\x11ObjectRequestLong\x12\x13.grpc.ObjectRequest\x1a\x12.grpc.LongResponse\x12@\n\x13ObjectRequestObject\x12\x13.grpc.ObjectRequest\x1a\x14.grpc.ObjectResponse\x12>\n\x0e\x42igIntegerList\x12\x18.grpc.IntegerListRequest\x1a\x12.grpc.VoidResponseb\x06proto3')
 )
 
 
 
 
-_USER = _descriptor.Descriptor(
-  name='User',
-  full_name='dsid.User',
+_OBJECT = _descriptor.Descriptor(
+  name='Object',
+  full_name='grpc.Object',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='dsid.User.name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      name='longAttr', full_name='grpc.Object.longAttr', index=0,
+      number=1, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='lastname', full_name='dsid.User.lastname', index=1,
+      name='stringAttr', full_name='grpc.Object.stringAttr', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='age', full_name='dsid.User.age', index=2,
-      number=3, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='nUSP', full_name='dsid.User.nUSP', index=3,
-      number=4, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
+      name='booleanAttr', full_name='grpc.Object.booleanAttr', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
@@ -73,13 +66,13 @@ _USER = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=20,
-  serialized_end=85,
+  serialized_end=87,
 )
 
 
 _VOIDREQUEST = _descriptor.Descriptor(
   name='VoidRequest',
-  full_name='dsid.VoidRequest',
+  full_name='grpc.VoidRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -96,18 +89,25 @@ _VOIDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=87,
-  serialized_end=100,
+  serialized_start=89,
+  serialized_end=102,
 )
 
 
-_VOIDREPLY = _descriptor.Descriptor(
-  name='VoidReply',
-  full_name='dsid.VoidReply',
+_STRINGREQUEST = _descriptor.Descriptor(
+  name='StringRequest',
+  full_name='grpc.StringRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='parameter', full_name='grpc.StringRequest.parameter', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -120,20 +120,20 @@ _VOIDREPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=102,
-  serialized_end=113,
+  serialized_start=104,
+  serialized_end=138,
 )
 
 
 _LONGREQUEST = _descriptor.Descriptor(
   name='LongRequest',
-  full_name='dsid.LongRequest',
+  full_name='grpc.LongRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='message', full_name='dsid.LongRequest.message', index=0,
+      name='parameter', full_name='grpc.LongRequest.parameter', index=0,
       number=1, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -151,100 +151,69 @@ _LONGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=115,
-  serialized_end=145,
+  serialized_start=140,
+  serialized_end=172,
 )
 
 
-_LONGREPLY = _descriptor.Descriptor(
-  name='LongReply',
-  full_name='dsid.LongReply',
+_EIGHTLONGREQUEST = _descriptor.Descriptor(
+  name='EightLongRequest',
+  full_name='grpc.EightLongRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='message', full_name='dsid.LongReply.message', index=0,
-      number=1, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=147,
-  serialized_end=175,
-)
-
-
-_BIGLONGREQUEST = _descriptor.Descriptor(
-  name='BigLongRequest',
-  full_name='dsid.BigLongRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='parameter1', full_name='dsid.BigLongRequest.parameter1', index=0,
+      name='parameter1', full_name='grpc.EightLongRequest.parameter1', index=0,
       number=1, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='parameter2', full_name='dsid.BigLongRequest.parameter2', index=1,
+      name='parameter2', full_name='grpc.EightLongRequest.parameter2', index=1,
       number=2, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='parameter3', full_name='dsid.BigLongRequest.parameter3', index=2,
+      name='parameter3', full_name='grpc.EightLongRequest.parameter3', index=2,
       number=3, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='parameter4', full_name='dsid.BigLongRequest.parameter4', index=3,
+      name='parameter4', full_name='grpc.EightLongRequest.parameter4', index=3,
       number=4, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='parameter5', full_name='dsid.BigLongRequest.parameter5', index=4,
+      name='parameter5', full_name='grpc.EightLongRequest.parameter5', index=4,
       number=5, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='parameter6', full_name='dsid.BigLongRequest.parameter6', index=5,
+      name='parameter6', full_name='grpc.EightLongRequest.parameter6', index=5,
       number=6, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='parameter7', full_name='dsid.BigLongRequest.parameter7', index=6,
+      name='parameter7', full_name='grpc.EightLongRequest.parameter7', index=6,
       number=7, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='parameter8', full_name='dsid.BigLongRequest.parameter8', index=7,
+      name='parameter8', full_name='grpc.EightLongRequest.parameter8', index=7,
       number=8, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -262,20 +231,168 @@ _BIGLONGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=178,
-  serialized_end=354,
+  serialized_start=175,
+  serialized_end=353,
 )
 
 
-_BIGLONGREPLY = _descriptor.Descriptor(
-  name='BigLongReply',
-  full_name='dsid.BigLongReply',
+_LONGLISTREQUEST = _descriptor.Descriptor(
+  name='LongListRequest',
+  full_name='grpc.LongListRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='message', full_name='dsid.BigLongReply.message', index=0,
+      name='parameter', full_name='grpc.LongListRequest.parameter', index=0,
+      number=1, type=3, cpp_type=2, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=355,
+  serialized_end=391,
+)
+
+
+_OBJECTREQUEST = _descriptor.Descriptor(
+  name='ObjectRequest',
+  full_name='grpc.ObjectRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='parameter', full_name='grpc.ObjectRequest.parameter', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=393,
+  serialized_end=441,
+)
+
+
+_INTEGERLISTREQUEST = _descriptor.Descriptor(
+  name='IntegerListRequest',
+  full_name='grpc.IntegerListRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='parameter', full_name='grpc.IntegerListRequest.parameter', index=0,
+      number=1, type=5, cpp_type=1, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=443,
+  serialized_end=482,
+)
+
+
+_VOIDRESPONSE = _descriptor.Descriptor(
+  name='VoidResponse',
+  full_name='grpc.VoidResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=484,
+  serialized_end=498,
+)
+
+
+_STRINGRESPONSE = _descriptor.Descriptor(
+  name='StringResponse',
+  full_name='grpc.StringResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='response', full_name='grpc.StringResponse.response', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=500,
+  serialized_end=534,
+)
+
+
+_LONGRESPONSE = _descriptor.Descriptor(
+  name='LongResponse',
+  full_name='grpc.LongResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='response', full_name='grpc.LongResponse.response', index=0,
       number=1, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -293,82 +410,20 @@ _BIGLONGREPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=356,
-  serialized_end=387,
+  serialized_start=536,
+  serialized_end=568,
 )
 
 
-_STRINGREQUEST = _descriptor.Descriptor(
-  name='StringRequest',
-  full_name='dsid.StringRequest',
+_OBJECTRESPONSE = _descriptor.Descriptor(
+  name='ObjectResponse',
+  full_name='grpc.ObjectResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='message', full_name='dsid.StringRequest.message', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=389,
-  serialized_end=421,
-)
-
-
-_STRINGREPLY = _descriptor.Descriptor(
-  name='StringReply',
-  full_name='dsid.StringReply',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='message', full_name='dsid.StringReply.message', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=423,
-  serialized_end=453,
-)
-
-
-_OBJECTREQUEST = _descriptor.Descriptor(
-  name='ObjectRequest',
-  full_name='dsid.ObjectRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='message', full_name='dsid.ObjectRequest.message', index=0,
+      name='response', full_name='grpc.ObjectResponse.response', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -386,192 +441,223 @@ _OBJECTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=455,
-  serialized_end=499,
+  serialized_start=570,
+  serialized_end=618,
 )
 
-
-_OBJECTREPLY = _descriptor.Descriptor(
-  name='ObjectReply',
-  full_name='dsid.ObjectReply',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='message', full_name='dsid.ObjectReply.message', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=501,
-  serialized_end=543,
-)
-
-_OBJECTREQUEST.fields_by_name['message'].message_type = _USER
-_OBJECTREPLY.fields_by_name['message'].message_type = _USER
-DESCRIPTOR.message_types_by_name['User'] = _USER
+_OBJECTREQUEST.fields_by_name['parameter'].message_type = _OBJECT
+_OBJECTRESPONSE.fields_by_name['response'].message_type = _OBJECT
+DESCRIPTOR.message_types_by_name['Object'] = _OBJECT
 DESCRIPTOR.message_types_by_name['VoidRequest'] = _VOIDREQUEST
-DESCRIPTOR.message_types_by_name['VoidReply'] = _VOIDREPLY
-DESCRIPTOR.message_types_by_name['LongRequest'] = _LONGREQUEST
-DESCRIPTOR.message_types_by_name['LongReply'] = _LONGREPLY
-DESCRIPTOR.message_types_by_name['BigLongRequest'] = _BIGLONGREQUEST
-DESCRIPTOR.message_types_by_name['BigLongReply'] = _BIGLONGREPLY
 DESCRIPTOR.message_types_by_name['StringRequest'] = _STRINGREQUEST
-DESCRIPTOR.message_types_by_name['StringReply'] = _STRINGREPLY
+DESCRIPTOR.message_types_by_name['LongRequest'] = _LONGREQUEST
+DESCRIPTOR.message_types_by_name['EightLongRequest'] = _EIGHTLONGREQUEST
+DESCRIPTOR.message_types_by_name['LongListRequest'] = _LONGLISTREQUEST
 DESCRIPTOR.message_types_by_name['ObjectRequest'] = _OBJECTREQUEST
-DESCRIPTOR.message_types_by_name['ObjectReply'] = _OBJECTREPLY
+DESCRIPTOR.message_types_by_name['IntegerListRequest'] = _INTEGERLISTREQUEST
+DESCRIPTOR.message_types_by_name['VoidResponse'] = _VOIDRESPONSE
+DESCRIPTOR.message_types_by_name['StringResponse'] = _STRINGRESPONSE
+DESCRIPTOR.message_types_by_name['LongResponse'] = _LONGRESPONSE
+DESCRIPTOR.message_types_by_name['ObjectResponse'] = _OBJECTRESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
-User = _reflection.GeneratedProtocolMessageType('User', (_message.Message,), dict(
-  DESCRIPTOR = _USER,
+Object = _reflection.GeneratedProtocolMessageType('Object', (_message.Message,), dict(
+  DESCRIPTOR = _OBJECT,
   __module__ = 'dsid_pb2'
-  # @@protoc_insertion_point(class_scope:dsid.User)
+  # @@protoc_insertion_point(class_scope:grpc.Object)
   ))
-_sym_db.RegisterMessage(User)
+_sym_db.RegisterMessage(Object)
 
 VoidRequest = _reflection.GeneratedProtocolMessageType('VoidRequest', (_message.Message,), dict(
   DESCRIPTOR = _VOIDREQUEST,
   __module__ = 'dsid_pb2'
-  # @@protoc_insertion_point(class_scope:dsid.VoidRequest)
+  # @@protoc_insertion_point(class_scope:grpc.VoidRequest)
   ))
 _sym_db.RegisterMessage(VoidRequest)
-
-VoidReply = _reflection.GeneratedProtocolMessageType('VoidReply', (_message.Message,), dict(
-  DESCRIPTOR = _VOIDREPLY,
-  __module__ = 'dsid_pb2'
-  # @@protoc_insertion_point(class_scope:dsid.VoidReply)
-  ))
-_sym_db.RegisterMessage(VoidReply)
-
-LongRequest = _reflection.GeneratedProtocolMessageType('LongRequest', (_message.Message,), dict(
-  DESCRIPTOR = _LONGREQUEST,
-  __module__ = 'dsid_pb2'
-  # @@protoc_insertion_point(class_scope:dsid.LongRequest)
-  ))
-_sym_db.RegisterMessage(LongRequest)
-
-LongReply = _reflection.GeneratedProtocolMessageType('LongReply', (_message.Message,), dict(
-  DESCRIPTOR = _LONGREPLY,
-  __module__ = 'dsid_pb2'
-  # @@protoc_insertion_point(class_scope:dsid.LongReply)
-  ))
-_sym_db.RegisterMessage(LongReply)
-
-BigLongRequest = _reflection.GeneratedProtocolMessageType('BigLongRequest', (_message.Message,), dict(
-  DESCRIPTOR = _BIGLONGREQUEST,
-  __module__ = 'dsid_pb2'
-  # @@protoc_insertion_point(class_scope:dsid.BigLongRequest)
-  ))
-_sym_db.RegisterMessage(BigLongRequest)
-
-BigLongReply = _reflection.GeneratedProtocolMessageType('BigLongReply', (_message.Message,), dict(
-  DESCRIPTOR = _BIGLONGREPLY,
-  __module__ = 'dsid_pb2'
-  # @@protoc_insertion_point(class_scope:dsid.BigLongReply)
-  ))
-_sym_db.RegisterMessage(BigLongReply)
 
 StringRequest = _reflection.GeneratedProtocolMessageType('StringRequest', (_message.Message,), dict(
   DESCRIPTOR = _STRINGREQUEST,
   __module__ = 'dsid_pb2'
-  # @@protoc_insertion_point(class_scope:dsid.StringRequest)
+  # @@protoc_insertion_point(class_scope:grpc.StringRequest)
   ))
 _sym_db.RegisterMessage(StringRequest)
 
-StringReply = _reflection.GeneratedProtocolMessageType('StringReply', (_message.Message,), dict(
-  DESCRIPTOR = _STRINGREPLY,
+LongRequest = _reflection.GeneratedProtocolMessageType('LongRequest', (_message.Message,), dict(
+  DESCRIPTOR = _LONGREQUEST,
   __module__ = 'dsid_pb2'
-  # @@protoc_insertion_point(class_scope:dsid.StringReply)
+  # @@protoc_insertion_point(class_scope:grpc.LongRequest)
   ))
-_sym_db.RegisterMessage(StringReply)
+_sym_db.RegisterMessage(LongRequest)
+
+EightLongRequest = _reflection.GeneratedProtocolMessageType('EightLongRequest', (_message.Message,), dict(
+  DESCRIPTOR = _EIGHTLONGREQUEST,
+  __module__ = 'dsid_pb2'
+  # @@protoc_insertion_point(class_scope:grpc.EightLongRequest)
+  ))
+_sym_db.RegisterMessage(EightLongRequest)
+
+LongListRequest = _reflection.GeneratedProtocolMessageType('LongListRequest', (_message.Message,), dict(
+  DESCRIPTOR = _LONGLISTREQUEST,
+  __module__ = 'dsid_pb2'
+  # @@protoc_insertion_point(class_scope:grpc.LongListRequest)
+  ))
+_sym_db.RegisterMessage(LongListRequest)
 
 ObjectRequest = _reflection.GeneratedProtocolMessageType('ObjectRequest', (_message.Message,), dict(
   DESCRIPTOR = _OBJECTREQUEST,
   __module__ = 'dsid_pb2'
-  # @@protoc_insertion_point(class_scope:dsid.ObjectRequest)
+  # @@protoc_insertion_point(class_scope:grpc.ObjectRequest)
   ))
 _sym_db.RegisterMessage(ObjectRequest)
 
-ObjectReply = _reflection.GeneratedProtocolMessageType('ObjectReply', (_message.Message,), dict(
-  DESCRIPTOR = _OBJECTREPLY,
+IntegerListRequest = _reflection.GeneratedProtocolMessageType('IntegerListRequest', (_message.Message,), dict(
+  DESCRIPTOR = _INTEGERLISTREQUEST,
   __module__ = 'dsid_pb2'
-  # @@protoc_insertion_point(class_scope:dsid.ObjectReply)
+  # @@protoc_insertion_point(class_scope:grpc.IntegerListRequest)
   ))
-_sym_db.RegisterMessage(ObjectReply)
+_sym_db.RegisterMessage(IntegerListRequest)
+
+VoidResponse = _reflection.GeneratedProtocolMessageType('VoidResponse', (_message.Message,), dict(
+  DESCRIPTOR = _VOIDRESPONSE,
+  __module__ = 'dsid_pb2'
+  # @@protoc_insertion_point(class_scope:grpc.VoidResponse)
+  ))
+_sym_db.RegisterMessage(VoidResponse)
+
+StringResponse = _reflection.GeneratedProtocolMessageType('StringResponse', (_message.Message,), dict(
+  DESCRIPTOR = _STRINGRESPONSE,
+  __module__ = 'dsid_pb2'
+  # @@protoc_insertion_point(class_scope:grpc.StringResponse)
+  ))
+_sym_db.RegisterMessage(StringResponse)
+
+LongResponse = _reflection.GeneratedProtocolMessageType('LongResponse', (_message.Message,), dict(
+  DESCRIPTOR = _LONGRESPONSE,
+  __module__ = 'dsid_pb2'
+  # @@protoc_insertion_point(class_scope:grpc.LongResponse)
+  ))
+_sym_db.RegisterMessage(LongResponse)
+
+ObjectResponse = _reflection.GeneratedProtocolMessageType('ObjectResponse', (_message.Message,), dict(
+  DESCRIPTOR = _OBJECTRESPONSE,
+  __module__ = 'dsid_pb2'
+  # @@protoc_insertion_point(class_scope:grpc.ObjectResponse)
+  ))
+_sym_db.RegisterMessage(ObjectResponse)
 
 
 
-_DSID = _descriptor.ServiceDescriptor(
-  name='DSID',
-  full_name='dsid.DSID',
+_GRPC = _descriptor.ServiceDescriptor(
+  name='GRPC',
+  full_name='grpc.GRPC',
   file=DESCRIPTOR,
   index=0,
   options=None,
-  serialized_start=546,
-  serialized_end=868,
+  serialized_start=621,
+  serialized_end=1335,
   methods=[
   _descriptor.MethodDescriptor(
-    name='SendsVoidResponse',
-    full_name='dsid.DSID.SendsVoidResponse',
+    name='VoidRequestVoid',
+    full_name='grpc.GRPC.VoidRequestVoid',
     index=0,
     containing_service=None,
     input_type=_VOIDREQUEST,
-    output_type=_VOIDREPLY,
+    output_type=_VOIDRESPONSE,
     options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='SendsLongResponse',
-    full_name='dsid.DSID.SendsLongResponse',
+    name='VoidRequestBigString',
+    full_name='grpc.GRPC.VoidRequestBigString',
     index=1,
     containing_service=None,
-    input_type=_LONGREQUEST,
-    output_type=_LONGREPLY,
+    input_type=_VOIDREQUEST,
+    output_type=_STRINGRESPONSE,
     options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='SendsBigLongResponse',
-    full_name='dsid.DSID.SendsBigLongResponse',
+    name='StringRequestSameString',
+    full_name='grpc.GRPC.StringRequestSameString',
     index=2,
     containing_service=None,
-    input_type=_BIGLONGREQUEST,
-    output_type=_BIGLONGREPLY,
+    input_type=_STRINGREQUEST,
+    output_type=_STRINGRESPONSE,
     options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='SendsStringResponse',
-    full_name='dsid.DSID.SendsStringResponse',
+    name='StringRequestBigString',
+    full_name='grpc.GRPC.StringRequestBigString',
     index=3,
     containing_service=None,
     input_type=_STRINGREQUEST,
-    output_type=_STRINGREPLY,
+    output_type=_STRINGRESPONSE,
     options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='SendsObjectResponse',
-    full_name='dsid.DSID.SendsObjectResponse',
+    name='LongRequestLong',
+    full_name='grpc.GRPC.LongRequestLong',
     index=4,
     containing_service=None,
+    input_type=_LONGREQUEST,
+    output_type=_LONGRESPONSE,
+    options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='EightLongRequestLong',
+    full_name='grpc.GRPC.EightLongRequestLong',
+    index=5,
+    containing_service=None,
+    input_type=_EIGHTLONGREQUEST,
+    output_type=_LONGRESPONSE,
+    options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='LongListRequestLong',
+    full_name='grpc.GRPC.LongListRequestLong',
+    index=6,
+    containing_service=None,
+    input_type=_LONGLISTREQUEST,
+    output_type=_LONGRESPONSE,
+    options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='LongRequestObject',
+    full_name='grpc.GRPC.LongRequestObject',
+    index=7,
+    containing_service=None,
+    input_type=_LONGREQUEST,
+    output_type=_OBJECTRESPONSE,
+    options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='ObjectRequestLong',
+    full_name='grpc.GRPC.ObjectRequestLong',
+    index=8,
+    containing_service=None,
     input_type=_OBJECTREQUEST,
-    output_type=_OBJECTREPLY,
+    output_type=_LONGRESPONSE,
+    options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='ObjectRequestObject',
+    full_name='grpc.GRPC.ObjectRequestObject',
+    index=9,
+    containing_service=None,
+    input_type=_OBJECTREQUEST,
+    output_type=_OBJECTRESPONSE,
+    options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='BigIntegerList',
+    full_name='grpc.GRPC.BigIntegerList',
+    index=10,
+    containing_service=None,
+    input_type=_INTEGERLISTREQUEST,
+    output_type=_VOIDRESPONSE,
     options=None,
   ),
 ])
-_sym_db.RegisterServiceDescriptor(_DSID)
+_sym_db.RegisterServiceDescriptor(_GRPC)
 
-DESCRIPTOR.services_by_name['DSID'] = _DSID
+DESCRIPTOR.services_by_name['GRPC'] = _GRPC
 
 # @@protoc_insertion_point(module_scope)
