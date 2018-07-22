@@ -13,8 +13,6 @@ With Python 3 installed, use the following commands to install the necessary pac
 
 ```
 
-The other modules are already present in the folder.
-
 To execute the server:
 ``` python3 grpc_server.py ```
 
